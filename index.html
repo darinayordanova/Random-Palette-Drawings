@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas Drawing App</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- <script type="text/javascript">
+    
+        $(document).ready(function () {
+            $.ajaxSetup({
+                cache: true
+            });
+            $.getScript('//connect.facebook.net/en_UK/all.js', function () {
+                // Load the APP / SDK
+                FB.init({
+                    appId: '288585397909199', // App ID from the App Dashboard
+                    cookie: true, // set sessions cookies to allow your server to access the session?
+                    xfbml: true, // parse XFBML tags on this page?
+                    frictionlessRequests: true,
+                    oauth: true
+                });
+
+                FB.login(function (response) {
+                    if (response.authResponse) {
+                        window.authToken = response.authResponse.accessToken;
+                    } else {
+
+                    }
+                }, {
+                    scope: 'publish_actions,publish_stream'
+                });
+
+            });
+
+            // Populate the canvas
+            var c = document.getElementById("canvas");
+            var ctx = c.getContext("2d");
+
+            ctx.font = "20px Georgia";
+            ctx.fillText("Posted to Facebook", 10, 50);
+
+        });
+    </script> -->
+    <div>
+        <button class="color"></button>
+        <button class="color"></button>
+        <button class="color"></button>
+        <button class="color"></button>
+        <button class="color"></button>
+
+        <button class="brush butt" onclick="changeBrush('butt')"></button>
+        <button class="brush round" onclick="changeBrush('round')"></button>
+        <button class="brush square" onclick="changeBrush('square')"></button>
+
+        <div class="relcont">
+            <div id="demosize"></div>
+        </div>
+
+        <input type="range" min="1" max="100" id="myRange" step="1" oninput="showVal(this.value)"
+            onchange="showVal(this.value)">
+            <button id="share"></button>
+            <a id="poster" href="#" onclick="PostImageToFacebook(window.authToken)">Post Canvas Image To Facebook</a>
+    </div>
+    <canvas id="canvas"></canvas>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
