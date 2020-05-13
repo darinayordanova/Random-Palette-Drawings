@@ -32,14 +32,14 @@ const map1 = buttons.map((button, index) => {
 
 resizeCanvas()
 
-function changeBrush(newBrush, el) {
+function changeBrush(newBrush,el){
 
-    brush = newBrush
+    brush=newBrush
     for (var i = 0; i < brushes.length; i++) {
         brushes[i].style.border = "none"
     }
     el.style.border = "4px solid #DEDDDB"
-
+    
 }
 
 function resizeCanvas() {
@@ -78,9 +78,7 @@ function paint(e) {
 canvas.addEventListener("mousedown", start);
 canvas.addEventListener("mouseup", finish);
 canvas.addEventListener("mouseout", finish);
-canvas.addEventListener("touchstart", start);
-canvas.addEventListener("touchend", finish);
-canvas.addEventListener("touchmove", paint)
+canvas.addEventListener("mousemove", paint)
 
 
 var myFunction = function () {
