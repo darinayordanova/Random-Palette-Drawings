@@ -31,8 +31,8 @@ body {
 
 input[type="range"] {
   margin-left: 20px;
-  width: 250px;
-  transform: rotate(90deg) translate(125px, 70px);
+  width: 200px;
+  transform: rotate(90deg) translate(100px, 45px);
 }
 #demosize {
   position: absolute;
@@ -50,12 +50,12 @@ input[type="range"] {
   margin: 5px auto;
   position: relative;
 }
-.butt{
-    border-radius: 0;
-    width: 5px;
-    margin-top: 50px;
+.butt {
+  border-radius: 0;
+  width: 5px;
+  margin-top: 50px;
 }
-.square{
-    border-radius: 0;
-    margin-bottom: 50px;
+.square {
+  border-radius: 0;
+  margin-bottom: 50px;
 }
